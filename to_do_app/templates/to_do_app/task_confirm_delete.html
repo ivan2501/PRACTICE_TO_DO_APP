@@ -1,0 +1,14 @@
+{% extends 'to_do_app/index.html' %}
+
+{% block content %}
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <h3 class="question">Are you sure that you want to delete task: |{{task}}| ?</h3>
+    <input name="btn-delete" type="submit" value="Delete">
+    <a href="{% url 'task-list' %}"><input name="btn-delete" type="button" value="Cancel"></a>
+</form>
+
+
+{% endblock %}

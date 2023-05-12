@@ -1,0 +1,19 @@
+{% extends 'to_do_app/index.html' %}
+
+{% block content %}
+
+<h1 class="question">REGISTER</h1>
+
+<form class="register_form" action="" method="POST">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <input name="approve-task" type="submit" value="Register">
+
+</form>
+
+
+<h3 class="question">Already have an account?<a href="{% url 'login' %}"><span class="reg-log"> Login</span></a></h3>
+
+
+{% endblock %}
